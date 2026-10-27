@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afashion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cl: red;
+            --c2: white;
+            --c3: gray;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .logo {
+            font-family: "Dancing Script", cursive;
+            font-size: 30pt;
+            color: var(--cl);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 7px;
+            background-color: rgb(255, 215, 0);
+            position: static;
+            top: 0;
+        }
+
+        .menu_top ul li {
+            list-style: none;
+            display: inline;
+            margin: 10px;
+            padding-bottom: 3px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .menu_top ul li::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: var(--cl);
+            height: 2px;
+            transform: scaleX(0);
+            transition: 0.6s;
+            transform-origin: left;
+        }
+
+        .menu_top ul li:hover::after {
+            transform: scaleX(1);
+        }
+
+        .Login {
+            cursor: pointer;
+        }
+
+        .container {
+            height: 1500px;
+        }
+
+        .cover {
+            display: flex;
+        }
+
+        .cover img {
+            width: 50%;
+            border: 10px solid var(--c2);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .cover img:hover {
+            box-shadow: 8px 8px 10px var(--c3);
+        }
+
+        .navigation {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+        }
+
+        .pl {
+            background-color: var(--cl);
+        }
+
+        .pr img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo">
+            AFashion
+        </div>
+        <div class="menu_top">
+            <ul>
+                <li><i class="fa-solid fa-house"></i> Home</li>
+                <li>Men's</li>
+                <li>Women's</li>
+                <li>Shop</li>
+                <li>Page</li>
+                <li>Blog</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <div class="Login">
+            <i class="fa-solid fa-user-minus"></i> Login | 
+            <i class="fa-solid fa-user"></i> Register
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="cover">
+            <img src="hot-sale-app-banner.jpg" alt="Hot Sale">
+            <img src="new-arrivals-app-banner.jpg" alt="New Arrivals">
+        </div>
+
+        <div class="navigation">
+            <div class="pl">
+                a
+            </div>
+            <div class="pc">
+                b
+            </div>
+            <div class="pr">
+                <h3>Adv1</h3>
+                <img src="ten11-men-banner.jpg" alt="Adv1">
+                <h3>Adv2</h3>
+                <img src="ten11-women-banner.jpg" alt="Adv2">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
